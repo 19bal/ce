@@ -1,0 +1,26 @@
+<h2>Akılcı İlaç Kullanım Sistemi</h2>
+
+<h2 style="width:600px">Duyurular</h2>
+<!-- slide -->
+<!-- kaynak : http://www.htmldrive.net/items/show/1069/Auto-Scroll-News-Ticker-with-jQuery  -->
+<div id="textslide" style="margin-left:60px;width:500px;">
+  <ul id="ticker" class="ticker" style="width:550px;">
+    <li>
+      foo
+    </li>
+    <li>
+      bar
+    </li>
+    <li>
+      baz
+    </li>
+  </ul>
+</div>
+
+<script>
+  function tick(){
+    $('#ticker li:first').slideUp( function () { $(this).appendTo($('#ticker')).slideDown(); });
+  }
+  setInterval(function(){ tick () }, 3000);
+</script>
+<!-- end slide -->

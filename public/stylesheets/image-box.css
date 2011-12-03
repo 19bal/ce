@@ -1,0 +1,22 @@
+ul.recent li { margin: 0 0 12px; line-height: 15px; }
+ul.recent li h5 { font-size: 13px; line-height: 15px; }
+ul.recent li h5 a { font-weight: bold; }
+ul.recent li small, ul.recent li small a { color: #999 !important; }
+ul.recent li small a:hover { color: #555 !important; }
+ul.recent li small span { padding: 0 3px; color: #ccc; font-size: 100%; }
+
+ul.recent.comments li { color: #999; }
+
+ul.photos { margin: 9px 0 18px -10px; }
+ul.photos li { display: inline; }
+ul.photos a { display: inline; float: left; margin: 0 0 9px 10px; line-height: 1; text-decoration: none; }
+ul.photos img { display: block; margin: 0 0 5px; padding: 4px; border: 1px solid #ccc; border-color: rgba(0,0,0,.25); -moz-border-radius: 5px; -moz-box-shadow: 0 1px 3px rgba(0,0,0,.15); -webkit-border-radius: 5px; -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.15); -webkit-transition: all 0.15s ease-out; }
+ul.photos a:hover img { border-color: #999; border-color: rgba(201,2,92,.5); -moz-box-shadow: 0 0 5px rgba(201,2,92,.5); -webkit-box-shadow: 0 0 5px rgba(201,2,92,.5); }
+ul.photos li h5 { font-size: 14px; }
+ul.photos.small { margin-left: -15px; }
+ul.photos.small a { margin: 0 0 14px 15px; }
+ul.photos.medium, ul.photos.large { margin-left: -20px; }
+ul.photos.medium a, ul.photos.large a { margin: 0 0 18px 20px; }
+ul.photos.medium img { width: 90px; height: 90px; }
+ul.photos.large img { width: 162px; height: 162px; }
+ul.photos.xlarge img { width: 210px; height: 210px; }

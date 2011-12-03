@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+"http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="TR" lang="tr">
+  <head>
+    <meta http-equiv = "Pragma" content = "no-cache" />
+    <meta http-equiv = "Expires" content = "-1" />
+    <meta http-equiv = "Content-Type" content = "text/html; charset=utf-8" />
+    <link rel="shortcut icon" href="{{@SR}}/public/images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="{{@SR}}/public/stylesheets/style.css" />
+    <script type='text/javascript' src='{{@SR}}/public/javascripts/jquery.js'></script>
+
+    <title>{{@title}}</title>
+  </head>
+<body>
+  <!--PLATFORM BAR-->
+  <div class="platform-bar">
+    <div class="row bar-content" style="margin-left:19px">
+      <span class="title">
+        <a href="http://omu.omu.edu.tr" >
+          ONDOKUZ MAYIS ÜNİVERSİTESİ
+        </a>
+      </span>
+      <ul class="related">
+        <li class="title">
+          <a href="{{@SR}}">
+            Ana Sayfa
+          </a>
+        </li>
+        <li class="title">
+          <a href="{{@SR}}/info">
+            Hakkında
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!--PLATFORM BAR END-->
+
+  <style>
+    div.page-header{
+      background:url(public/images/logo.png) no-repeat 98% top;
+      height: 90px;
+      background-size: auto;
+    }
+  </style>
+  <div id="logo">
+    <div class="page-header">
+      <h1>Ondokuz Mayıs Üniversitesi</h1>
+      <h2>Web Tabanlı Akılcı İlaç Kullanım Sistemine Hoş Geldiniz</h2>
+    </div>
+    <div id="notice" style="margin-top:-30px;">
+      <div class="row">
+        <ul class="sub-nav">
+          <li class="current">
+          <a href="{{@SR}}" title="Ana Sayfa">
+            Ana Sayfa
+          </a>
+          </li>
+          <li class="current">
+          <a href="{{@SR}}/drug">
+            Etkileşim
+          </a>
+          </li>
+          <li class="current">
+          <a href="{{@SR}}/review">
+            İlaçlar[A-Z]
+          </a>
+          </li>
+          <li class="current">
+          <a href="{{@SR}}/info">
+            Hakkında
+          </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="content">
+    <F3:include href="{{@template}}.htm"/>
+  </div>
+
+  <div id="footer">
+    <ul class="recent photos" style="float:left;">
+      <li><a href="http://sim.omu.edu.tr" title="Bilgisayar Mühendisliği">
+        <img src="{{@SR}}/public/images/sim.png" width="26" height="26"/>
+      </a></li>
+    </ul>
+    <div style="margin-left:60px;margin-top:5px">
+      copyright &copy; 2011 Akılcı İlaç Kullanım Sistemi<br/>
+      <b>irtibat</b> : <code id="errorline">web@bil.omu.edu.tr</code>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<script type="text/javascript" src="{{@SR}}/public/javascripts/jquery.dataTables.js">
+</script>
+
+<script type="text/javascript" charset="utf-8">
+  $(document).ready(function() {
+      oTable = $('#example').dataTable({
+	"bJQueryUI": true,
+	"sPaginationType": "full_numbers"
+      });
+  } );
+</script>
+
+<h2>İlaçlar İnceleniyor</h2>
+
+<div class="dt_example module">
+  <table cellpadding="0" cellspacing="0" border="0" class="display" id="example">
+    <thead>
+      <tr>
+        <th>Ad</th>
+        <th>İçerik</th>
+        <th>İşlemeler</th>
+      </tr>
+    </thead>
+    <tbody>
+      <F3:repeat group="{{@drugs}}" value="{{@drug}}" >
+      <tr>
+        <td class="label">
+          {{@drug.name}}
+        </td>
+        <td class="label">
+          <F3:check if="{{strlen(@drug.content)>97}}">
+          <F3:true>{{substr(@drug.content, 0, 97)}}...</F3:true>
+          <F3:false>{{@drug.name}}</f3:false>
+          </F3:check>
+        </td>
+        <td class="label" style="float:left;width:92px">
+          <a href="{{@SR}}/show/{{@drug.id}}" target="_black">
+            <input type="submit" id="button-preview" title="İncele" value="">
+          </a>
+        </td>
+      </tr>
+      </F3:repeat>
+    </tbody>
+  </table>
+</div>

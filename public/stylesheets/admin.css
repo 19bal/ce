@@ -1,0 +1,114 @@
+#admin-panel { width:920px; height:70px; border-bottom:1px solid #ddd; margin:-20px 0 10px; padding-bottom:10px;}
+#admin-panel ul { font-size:11px; font-weight:bold; list-style-type:none; margin-left:-40px; }
+#admin-panel li { float:left; width:114px; color:#3072b3; text-align:center; padding:0 auto; }
+#admin-panel li a { display:block;padding-top:50px;margin-top:0px;}
+#admin-panel li.table a, #admin-panel li.save a {cursor:auto;}
+#admin-panel li.table a     {background: url(../images/accept_database.png) no-repeat top center;}
+#admin-panel li.save a      {background: url(../images/save.png) no-repeat top center;}
+#admin-panel li.home a      {background: url(../images/database.png) no-repeat top center;}
+#admin-panel li.review a    {background: url(../images/search_page.png) no-repeat top center;}
+#admin-panel li.create a    {background: url(../images/add_to_database.png) no-repeat top center;}
+#admin-panel li.find a      {background: url(../images/search_database.png) no-repeat top center;}
+#admin-panel li.upload a    {background: url(../images/database_upload.png) no-repeat top center;}
+#admin-panel li.download a  {background: url(../images/download_database.png) no-repeat top center;}
+
+
+/* ------------------------ custom table form ----------------------------- */
+table.custom {
+    width:599px;
+    margin:0 auto;
+    border-spacing: 5px;
+    border-collapse: separate;
+}
+
+table.custom th,
+table.custom td {
+    padding: 3px;
+    font-size: 12px;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+}
+
+table.custom textarea {height:150px;}
+table.custom textarea,
+table.custom input[type=text],
+table.custom input[type=password]{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 8px;
+    margin: 0;
+    font-size: 13px;
+    color: #555;
+    width: 354px;
+    border: 1px solid #ccc;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+}
+
+table.custom select {
+    border:1px solid #bdc7d8;
+    font:   13px Arial, Helvetica, sans-serif;
+    padding:3px;
+    padding-top:5px;
+    background:#fff;
+    width:  372px;
+    height: 30px;
+    color:  #585858;
+}
+
+table.custom input[type=text]:focus,
+table.custom input[type=password]:focus {
+    outline: 0;
+    border: 1px solid #35addf;
+}
+
+table.custom td.label {
+    text-align: right;
+    vertical-align: top;
+    color: #333;
+    width: 200px;
+    font-weight: bold;
+    font-size: 11px;
+    border-top: 1px solid #ddd;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    padding-top:10px;
+}
+
+table.custom td.field {
+    width: 350px;
+    background: #ededed;
+}
+table.custom td.field span{float:left;margin:4px;}
+
+table.custom td.captcha {
+    float: right;
+    display: inline-block;
+    margin-top: -5.5em;
+    margin-right: -12em;
+}
+
+/* -------------------------------------------------------------------- */
+
+#button-preview,
+#button-edit,
+#button-delete{
+    background:url(../images/search.png) no-repeat center;
+    width:24px;
+    height:24px;
+    border:none;
+    cursor:pointer;
+    float:left;
+    margin-right:10px;
+}
+#button-edit{background:url(../images/edit.png) no-repeat center;}
+#button-delete{background:url(../images/delete.png) no-repeat center;margin-right:0px;}
+
+/* -------------------------------------------------------------------- */
+
+#connect{background:url(../images/connect.png) no-repeat 0% ;padding-left:40px;}
+#unconnect{background:url(../images/unconnect.png) no-repeat 0% ;padding-left:40px;}
+
+#process{background:url(../images/process.png) no-repeat 0% ;padding-left:50px;}
