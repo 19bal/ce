@@ -1,0 +1,33 @@
+<script type="text/javascript" src="{{@SR}}/public/javascripts/facebox.js"></script>
+<script type="text/javascript">
+  jQuery(document).ready(function($) {
+    $('a[rel*=facebox]').facebox({
+    loadingImage : '{{@SR}}/public/images/loading.gif',
+    closeImage   : '{{@SR}}/public/images/closelabel.png'
+    });
+    vtip();
+  })
+</script> 
+
+<!-- tooltip »vtip -->
+<script type="text/javascript" src="{{@SR}}/public/javascripts/vtip.js"></script> 
+<!-- ilaç seçimi -->
+<script type="text/javascript" src="{{@SR}}/public/javascripts/jquery.tokeninput.js"></script>
+<!-- end ilaç seçimi -->
+
+<h2>İlaç Etkileşimi</h2>
+ilaç seçiminizi buradan yapabilirsiniz:
+
+<div class="tokeninput" style="margin-left:250px">
+  <form action="drugscontent" method="post">
+    <label class="label">
+      <input type="text" id="drugs" name="drugs" />
+    </label>
+    <input type="submit" class="button" value="Kaydet" />
+    <script type="text/javascript">
+      $(document).ready(function() {
+          $("#drugs").tokenInput("inc/get_drug.php");
+      });
+    </script>
+  </form>
+</div>
