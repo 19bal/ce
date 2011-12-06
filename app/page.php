@@ -22,6 +22,10 @@ class Page extends F3instance {
 		$this->_clear(array('success', 'error'));
 		$this->_page('drug', 'Hmmm');
 	}
+	function drugcontent() {
+		$this->_clear(array('success', 'error'));
+		$this->_page('drugcontent', 'Hmmm2');
+	}
 	function show() {
 		$table = new Axon('drugs55');
 		$drug = $table->afind("id='" . F3::get('PARAMS.id') . "'");
@@ -54,6 +58,26 @@ class Page extends F3instance {
 
 		F3::set('drugs', $selected_drugs);
 		$this->_page('selected_drugs', 'Seçilen İlaçlar');
+	}
+	function drugscontent() {
+		if(empty($_POST)) {
+			echo "Herhangi bir ilaç seçimi yapılmamış";
+			return;
+		}
+
+		$drug = new Axon("drugs55");
+		$drug_ids = preg_split('/,/', $_POST['drugs']);
+		$selected_drugs = array();
+
+		foreach($drug_ids as $id) {
+			$datas = $drug->afind("id='$id'");
+			$name  = $datas[0]['name'];
+			$content  = $datas[0]['content'];
+			$selected_drugs[$id] = array($name, content_split($content));
+		}
+
+		F3::set('drugs', $selected_drugs);
+		$this->_page('selected_drugscontent', 'Seçilen İlaçlar');
 	}
 	// ilaçların içeriklerinde ilginç işlemler, deneme yeri
 	function dr() {

@@ -2,6 +2,8 @@
 include 'init.php';
 include 'csv.php';
 include 'upload.php';
+include 'new_drug.php';
+include 'content_split.php';
 
 function array_in($item, $fields) {
 	foreach ($fields as $field => $type) {

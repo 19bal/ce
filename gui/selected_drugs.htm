@@ -28,4 +28,9 @@ href="{{@SR}}/public/stylesheet/jquery-ui.css" />
     <div id="frag-{{@ctr}}"><p class="answer">{{@arr[1]}}</p></div>
   </F3:repeat>
 
+  <F3:repeat group="{{@drugs}}" key="{{@id}}" value="{{@arr}}" 
+  counter="{{@ctr}}">
+    <div id="frag-{{@ctr}}"><p class="answer">{{@arr[1]}}</p></div>
+  </F3:repeat>
+
 </div>
