@@ -8,7 +8,8 @@ function content_split($s) {
 			'İlaç Etkileşimleri:',
 			'Doz Önerisi:');
 
-		$siralanacak = array();
+	$dict = array();
+	$siralanacak = array();
 
 	if (preg_match("/Doz Önerisi/", $s ,$match1, PREG_OFFSET_CAPTURE))
 	{
@@ -40,17 +41,16 @@ function content_split($s) {
 	}
 	sort($siralanacak);
 	
-	yazdir($s,$siralanacak[0],$siralanacak[1]-1);
-	yazdir($s,$siralanacak[1],$siralanacak[2]-1);
-	yazdir($s,$siralanacak[2],$siralanacak[3]-1);
-	yazdir($s,$siralanacak[3],$siralanacak[4]-1);
-	yazdir($s,$siralanacak[4],$siralanacak[5]-1);
-	yazdir($s,$siralanacak[5],$siralanacak[6]-1);
-	yazdir($s,$siralanacak[6],strlen($s)-1);
-}
-function yazdir($s, $basla, $bitis)
-{
-	for ($i = $basla; $i <= $bitis; $i += 1)
-		print_r( $s[$i]);		
+	$dict[$ayiricilar[0]] = substr($s, $siralanacak[0],$siralanacak[1] - $siralanacak[0]);
+	for ( $i = 0; $i < count($siralanacak); $i += 1){
+		if( $i != count($siralanacak) - 1)
+			$dict[$ayiricilar[$i]]= substr($s, $siralanacak[$i],$siralanacak[$i + 1] - $siralanacak[$i]);
+		else
+			$dict[$ayiricilar[$i]]= substr($s, $siralanacak[$i]);
+		}
+	
+	foreach($dict as $i)
+		print_r( $i);
+
 }
 ?>
