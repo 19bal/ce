@@ -49,8 +49,6 @@ function content_split($s) {
 			$dict[$ayiricilar[$i]]= substr($s, $siralanacak[$i]);
 		}
 	
-	foreach($dict as $i)
-		print_r( $i);
-
+	return $dict;
 }
 ?>
