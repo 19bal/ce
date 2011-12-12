@@ -39,14 +39,14 @@ function content_split($s) {
 	{
 		array_push($siralanacak,$match7[0][1]);
 	}
-	sort($siralanacak);
+	$sirali = sort($siralanacak);
 	
-	$dict[$ayiricilar[0]] = substr($s, $siralanacak[0],$siralanacak[1] - $siralanacak[0]);
-	for ( $i = 0; $i < count($siralanacak); $i += 1){
-		if( $i != count($siralanacak) - 1)
-			$dict[$ayiricilar[$i]]= substr($s, $siralanacak[$i],$siralanacak[$i + 1] - $siralanacak[$i]);
+	$dict[$wanted[0]] = substr($s, $sirali[0],$sirali[1] - $sirali[0]);
+	for ( $i = 0; $i < count($sirali); $i += 1){
+		if( $i != count($sirali) - 1)
+			$dict[$wanted[$i]]= substr($s, $sirali[$i],$sirali[$i + 1] - $sirali[$i]);
 		else
-			$dict[$ayiricilar[$i]]= substr($s, $siralanacak[$i]);
+			$dict[$wanted[$i]]= substr($s, $sirali[$i]);
 		}
 	
 	return $dict;
