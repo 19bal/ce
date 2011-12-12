@@ -49,6 +49,6 @@ function content_split($s) {
 			$dict[$wanted[$i]]= substr($s, $sirali[$i]);
 		}
 	
-	return $dict;
+	return $dict[$wanted[0]];
 }
 ?>
