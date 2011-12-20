@@ -10,7 +10,8 @@ function content_split($s) {
 					'Kontrendikasyonları:',
 					'Etken Madde:',
 					'Kullanım Şekli:',
-					'Piyasa Şekilleri:');
+					'Piyasa Şekilleri:',
+					'Eşdeğeri:');
 
 	$dict = array();
 	$sozluk = array();
@@ -18,7 +19,7 @@ function content_split($s) {
 	$dictters = array();
 	$dictnum = array();
 	
-	$durum = array(0,0,0,0,0,0,0,0,0,0,0,0);
+	$durum = array(0,0,0,0,0,0,0,0,0,0,0,0,0);
 	
 	if (preg_match("/Doz Önerisi/", $s ,$match0, PREG_OFFSET_CAPTURE))
 	{
@@ -107,6 +108,14 @@ function content_split($s) {
 		$dictnum['Piyasa Şekilleri:'] = 10;
 		array_push($dizi, $match10[0][1]);
 		$durum[10]=1;
+	}
+	if (preg_match("/Eşdeğeri:/", $s ,$match11, PREG_OFFSET_CAPTURE))
+	{
+		$sozluk[$match11[0][1]] = 'Eşdeğeri:';
+		$dictters['Eşdeğeri:'] = $match11[0][1];
+		$dictnum['Eşdeğeri:'] = 11;
+		array_push($dizi, $match11[0][1]);
+		$durum[11]=1;
 	}
 	
 	sort($dizi);
