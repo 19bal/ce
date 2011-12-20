@@ -22,9 +22,9 @@ function content_split($s) {
 	
 	if (preg_match("/Doz Önerisi/", $s ,$match0, PREG_OFFSET_CAPTURE))
 	{
-		$sozluk[$match0[0][1]] = 'Ambalaj:';
-		$dictters['Ambalaj:'] = $match0[0][1];
-		$dictnum['Ambalaj:'] = 0;
+		$sozluk[$match0[0][1]] = 'Doz Önerisi:';
+		$dictters['Doz Önerisi:'] = $match0[0][1];
+		$dictnum['Doz Önerisi:'] = 0;
 		array_push($dizi, $match0[0][1]);
 		$durum[0]=1;
 	}
