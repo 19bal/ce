@@ -1,0 +1,99 @@
+<script type="text/javascript" src="{{@SR}}/public/javascripts/facebox.js"></script>
+<script type="text/javascript">
+  jQuery(document).ready(function($) {
+    $('a[rel*=facebox]').facebox({
+    loadingImage : '{{@SR}}/public/images/loading.gif',
+    closeImage   : '{{@SR}}/public/images/closelabel.png'
+    });
+    vtip();
+  })
+</script> 
+
+<!-- tooltip »vtip -->
+<script type="text/javascript" src="{{@SR}}/public/javascripts/vtip.js"></script> 
+<!-- ilaç seçimi -->
+<script type="text/javascript" src="{{@SR}}/public/javascripts/jquery.tokeninput.js"></script>
+<!-- end ilaç seçimi -->
+
+
+<style>
+  #table { margin-left:-20px;}
+  #table th {
+    font-size:9px;
+    padding:0px;
+    font-weight:lighter;
+    border:1px solid #ddd;
+    min-height:20px;height:20px;
+  }
+  #table th.x,
+  #table th.header,
+  #table th.launch {
+    background-color:#ccc;
+  }
+
+  #table th.clock,
+  #table th.field1,
+  #table th.field2 {
+    min-height:65px;height:65px;
+  }
+
+  #table th.field1{min-width:45px;width:45px;}
+  #table th.field2{min-width:120px;width:120px;}
+  #table th.launch {
+    min-height:20px;height:20px;
+  }
+</style>
+
+<h2>Reçete</h2>
+
+<form action="drugscontent" method="post">
+  <table id="table">
+    <tr>
+      <th colspan="4">Reçete Bilgileri</th>
+    </tr>
+    <tr>
+      <th class="field1">Hasta Adı</th>
+      <th class="field2">Ramazan Sarsılmaz</th>
+      <th class="field1">Yaş</th>
+      <th class="field2">
+            <input type="text" id="sex" name="sex" />
+      </th>
+    </tr>
+    <tr>
+      <th class="field1">Tc Kimlik No</th>
+      <th class="field2">
+        <div class="tokeninput">
+          <label class="label">
+            1234567890
+          </label>
+        </div>
+      </th>
+      <th rowspan=2 class="field1">Doktor Adı</th>
+      <th rowspan=2 class="field2">
+        Mustafa Çapraz
+      </th>
+    </tr>
+    <tr>
+      <th class="field1">İlaç</th>
+      <th class="field2">
+        <div class="tokeninput">
+          <label class="label">
+            <input type="text" id="drugs" name="drugs" />
+          </label>
+        </div>
+      </th>
+    </tr>
+    <tr>
+      <th colspan="3" class="field1"></th>
+      <th class="field2">
+        <input type="submit" class="button" value="Kaydet" />
+      </th>
+    </tr>
+  </table>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+        $("#drugs").tokenInput("inc/get_drug.php");
+        });
+  </script>
+</form>
