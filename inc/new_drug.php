@@ -30,7 +30,7 @@ function newdrugs() {
 	$drugs = DB::sql('select * from drugs');
 	foreach ($drugs as $drug) {
 		echo $drug['name'];
-		$d = new Axon('drugs55');
+		$d = new Axon('drugs');
 		$d->name = $drug["name"];
 		$d->content = content_clear($drug["content"]);
 		$d->dmn = $drug["dmn"];

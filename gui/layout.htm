@@ -6,28 +6,44 @@
     <meta http-equiv = "Expires" content = "-1" />
     <meta http-equiv = "Content-Type" content = "text/html; charset=utf-8" />
     <link rel="shortcut icon" href="{{@SR}}/public/images/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="{{@SR}}/public/stylesheets/style.css" />
+    <link rel="stylesheet" type="text/css" 
+    href="{{@SR}}/public/stylesheets/style-home.css" />
     <script type='text/javascript' src='{{@SR}}/public/javascripts/jquery.js'></script>
 
     <title>{{@title}}</title>
+    <style>
+      #content {min-height:100px}
+      .platform-bar {
+        width: 960px;
+        margin: auto;
+        padding: 0px;
+        border-top-left-radius:5px;
+        border-top-right-radius:5px;
+      }
+      div.page-header {
+        background:url(public/images/logo.png) no-repeat 98% top;
+        height: 90px;
+        background-size: auto;
+      }
+    </style>
   </head>
 <body>
   <!--PLATFORM BAR-->
   <div class="platform-bar">
-    <div class="row bar-content" style="margin-left:19px">
+    <div class="row bar-content">
       <span class="title">
         <a href="http://omu.omu.edu.tr" >
           ONDOKUZ MAYIS ÜNİVERSİTESİ
         </a>
       </span>
       <ul class="related">
-        <li class="title">
+        <li class="menu">
           <a href="{{@SR}}">
             Ana Sayfa
           </a>
         </li>
-        <li class="title">
-          <a href="{{@SR}}/info">
+        <li class="end">
+          <a href="{{@SR}}/about">
             Hakkında
           </a>
         </li>
@@ -36,13 +52,6 @@
   </div>
   <!--PLATFORM BAR END-->
 
-  <style>
-    div.page-header{
-      background:url(public/images/logo.png) no-repeat 98% top;
-      height: 90px;
-      background-size: auto;
-    }
-  </style>
   <div id="logo">
     <div class="page-header">
       <h1>Ondokuz Mayıs Üniversitesi</h1>
@@ -72,6 +81,11 @@
           </a>
           </li>
           <li class="current">
+          <a href="{{@SR}}/prescription">
+            Reçete
+          </a>
+          </li>
+          <li class="current">
           <a href="{{@SR}}/info">
             Hakkında
           </a>
@@ -91,10 +105,8 @@
         <img src="{{@SR}}/public/images/sim.png" width="26" height="26"/>
       </a></li>
     </ul>
-    <div style="margin-left:60px;margin-top:5px">
       copyright &copy; 2011 Akılcı İlaç Kullanım Sistemi<br/>
       <b>irtibat</b> : <code id="errorline">web@bil.omu.edu.tr</code>
-    </div>
   </div>
 </body>
 </html>

@@ -1,4 +1,4 @@
-.dt_example {font: 11px "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;width: 910px;float:left;}
+.dt_example {font: 11px "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;width: 920px;float:left;}
 
 /* -------------------------------------------------------------------------------------------*/
 
@@ -125,6 +125,7 @@ tr.even td.sorting_3 {background-color: #F9F9FF;}
 /* --------- bu noktadan sonra hmm demeye başlıyoruz ---------- */
 /* ------------------------------------------------------------ */
 
+#content {height:540px;}
 .ui-buttonset { margin-right: 12px; }
 
 .ui-widget-header {border: 1px solid #d3d3d3;background: #f8f8f8;}
@@ -137,12 +138,3 @@ tr.even td.sorting_3 {background-color: #F9F9FF;}
 #example {border-left: 1px solid #d3d3d3;border-right: 1px solid #d3d3d3;}
 #example_length select {width:60px;}
 .dt_example textarea{width:100;}
-
-select{font:13px Arial,Helvetica,sans-serif;border:1px solid #bdc7d8;padding:3px;background:#fff;width:158px;height:27px;color:#585858;}
-
-input[type=text] {height:20px;outline: 0; border: 1px solid #ddd;}
-input[type=text]:focus {outline: 0; border: 1px solid #35addf;}
-
-.module {background: none repeat scroll 0 0 #EEEEEE; border-radius:5px 5px 5px 5px; padding:4px; margin-top:-20px}
-
-

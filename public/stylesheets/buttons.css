@@ -2,7 +2,7 @@
     position: relative;
     overflow: visible;
     display: inline-block;
-    padding: 6px 14px;
+    padding: 7px 14px;
     border: 1px solid #d4d4d4;
     margin: 0;
     text-decoration: none;
@@ -82,7 +82,7 @@
     width: 12px;
     height: 12px;
     margin: 0 0.75em 0 -0.25em;
-    background: url(../images/gh-icons.png) 0 99px no-repeat;
+    background: url(../img/gh-icons.png) 0 99px no-repeat;
 }
 
 .button.arrowup.icon:before { background-position: 0 0; }
@@ -285,7 +285,7 @@
 
 .button.pill { -webkit-border-radius: 50em; -moz-border-radius: 50em; border-radius: 50em; }
 .button.disable { opacity: 0.5; }
-.button.big { font-size: 12px; padding:8px 14px;}
+.button.big { font-size: 11px; padding:8px 14px;}
 .button.big.icon:before { top: 0; }
 
 /* ............................................................................................................. Standard */
@@ -355,23 +355,5 @@
 
 .button-container .button,
 .button-container .button-group { vertical-align: top; }
-
-
-.button-submit {
-    height:23px;
-    color:#2F7CA2;
-    text-align:center;
-    padding-top:6px;
-    background:url(../images/btn.png) no-repeat top;
-    font-weight:bold;
-    width:96px;
-    font-size:13px;
-    display:block;
-    cursor:pointer;
-    border:none;
-    height:auto;
-    padding-bottom:7px;
-}
-.button-submit:hover {box-shadow:0 3px 7px rgba(0, 0, 0, 0.2);}
 
 

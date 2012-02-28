@@ -1,23 +1,189 @@
-@import url(base.css);
+html {
+}
+a { text-decoration: none; }
+img { border: none; }
+body {
+    font-family: "Helvetica Neue", Helvetica, Corbel, Arial, sans-serif;
+    font-size: 12px;
+    margin:     auto;
+    padding:    auto;
+    color:#555;
+    background:#f0f0f0;
+    font-family:Arial, Helvetica, Helvetica Neue, Verdana, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+#content {
+    width: 920px;
+    margin: 5px auto 10px;;
+    background: #fff;
+    padding: 20px;
+    height:auto;
+    min-height:480px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    /*
+    -webkit-box-shadow:0 2px 2px rgba(0,0,0,0.2);
+    -moz-box-shadow:0 2px 2px rgba(0,0,0,0.2);
+    box-shadow:0 5px 20px rgba(0, 0, 0, 0.3);
+*/
+    -webkit-box-shadow:0 2px 2px rgba(0,0,0,0.2);
+    -moz-box-shadow:0 2px 2px rgba(0,0,0,0.2);
+    box-shadow:0 3px 12px rgba(0, 0, 0, 0.3);
 
-@import url(admin.css);
+}
 
-@import url(flash.css);
+#content h2 {
+  color: #3072b3;
+  border-bottom:1px solid #ddd;
+  padding:0 5px 8px 5px;
+  margin:5px 0 15px;
+  width:770px;
+}
 
-@import url(label.css);
+#image-box {
+    height:auto;
+    margin-top:5px;
+    float:left;
+    font-size:13px;
+    background: #fff;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow:0 2px 2px rgba(0,0,0,0.2);
+    -moz-box-shadow:0 2px 2px rgba(0,0,0,0.2);
+    box-shadow:0 2px 2px rgba(0,0,0,0.2);
+}
+#image-box td.xsmall img{width:32px; height:32px}
+#image-box td.small img{width:71px; height:71px}
+#image-box td.medium img{width:135px; height:135px}
+#image-box td.large img{width:185px; height:185px}
+#image-box tr{font-size:12px;font-weight:bold;width:100px;}
 
-@import url(banner.css); /* platform, page_header, logo */
+a {
+    color: #3b5998;
+    cursor: pointer;
+    -moz-outline-style: none;
+    text-decoration:none
+}
 
-@import url(ribbon.css);
+/* footer */
 
-@import url(buttons.css);
+#footer { width: 940px;margin: 27px auto 0; border-top: 1px solid #ddd; padding: 10px 0 18px; clear: both; position: relative;}
+#footer .recent.photos  { float:left; }
+#footer p.copyright { margin: 0; }
+#footer ul{margin:0;padding:0;border:0;outline:0;font-size:100%;font:inherit;vertical-align:baseline; float: right; height: 27px; margin: -2px -12px 10; }
+#footer ul li { display: inline;}
+#footer ul li a,
+#site-info ul li a:visited { float: left; width: auto; margin: 0; padding: 2px 12px 2px; color: #777; text-decoration:none;}
+/* end footer */
 
-@import url(datatable.css);
+/* ------------- wrapper - header ------------------------- */
+div#wrapper {border-top:4px solid #3072b3;clear:left;}
+div#container {
+    position:relative;
+    width:960px;
+    padding:0;
+    font-size:11px;
+    position:relative;
+    height:45px;
+    margin:0 auto -15px
+}
+ul.tabs {float:right;margin:0}
+ul.tabs li {display:block;float:left;line-height:1}
+ul.tabs li a {display:block;font-weight:bold;margin:9px 0 0 -1px;margin-right:10px;padding:2px 5px 11px 15px;border-left:1px solid #eee;text-decoration:none;color:#333;cursor:pointer}
+ul.tabs li a:hover,
+ul.tabs li.current a {
+    background:#3072b3;
+    color:#fff;
+    border:0;
+    margin:0;
+    padding-top:11px;
+    padding-right:15px;
+    text-shadow:0 -1px 1px rgba(0,0,0,.25);
+    -webkit-border-bottom-left-radius:3px;
+    -webkit-border-bottom-right-radius:3px;
+    -moz-border-radius:0 0 3px 3px;
+    position:relative;
+    z-index:2;
+}
 
-@import url(global.css); /* textslide */
+ul.tabs li.home a:hover {background:#3072b3}
+ul.tabs li.green a:hover {background:#b8d30b}
+ul.tabs li.magenta a:hover {background:#a9014b}
+ul.tabs li.orange a:hover {background:#ff6908}
+ul.tabs li.yellow a:hover {background:#fc9200}
 
-@import url(local.css);
 
-@import url(bundle.css); /* autocomplete */
+h2.home {color:#3072b3}
+h2.green, h3.green{color:#95a105}
+h2.magenta {color:#a9014b}
+h2.orange {color:#d45500}
+h2.yellow {color:#fc9200;color:#d17200;}
+/* ------------------------------------------------------- */
 
-@import url(image-box.css); /* autocomplete */
+
+/* --------------------- button ------------------------- */
+
+.awesome, .awesome:visited {
+    background: #222;
+    display: inline-block;
+    padding: 3px 10px 4px;
+    color: #fff;
+    text-decoration: none;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    position: relative;
+    cursor: pointer;
+}
+
+.awesome:hover { background-color: #111; color: #fff; }
+.awesome:active { top: 1px; }
+.small.awesome,
+.small.awesome:visited { font-size: 11px;}
+.awesome,
+.awesome:visited,
+.medium.awesome,
+.medium.awesome:visited {font-size: 13px; font-weight: bold; line-height: 1; text-shadow: 0 -1px 1px rgba(0,0,0,0.25); }
+.large.awesome,
+.large.awesome:visited { font-size: 14px; padding: 5px 12px 6px; }
+.green.awesome,
+.green.awesome:visited {background-color: #91bd09;}
+.green.awesome:hover { background-color: #749a02; }
+.blue.awesome,
+.blue.awesome:visited { background-color: #2daebf; }
+.blue.awesome:hover { background-color: #007d9a; }
+.red.awesome,
+.red.awesome:visited { background-color: #e33100; }
+.red.awesome:hover { background-color: #872300; }
+.magenta.awesome,
+.magenta.awesome:visited { background-color: #a9014b; }
+.magenta.awesome:hover { background-color: #630030; }
+.orange.awesome,
+.orange.awesome:visited { background-color: #ff5c00; }
+.orange.awesome:hover { background-color: #d45500; }
+.yellow.awesome,
+.yellow.awesome:visited { background-color: #ffb515; }
+.yellow.awesome:hover { background-color: #fc9200; }
+
+/* --------------------- end button ------------------------------ */
+
+
+/* ----------------------- color-box-  ----------------------------*/
+.white_content {
+    position: absolute;top: 30px;width: 820px;height: auto; padding: 20px;
+    background-color: white;z-index:1002;overflow: auto;
+    border: 6px solid #ccc;
+    -moz-border-radius: 5px; border-radius: 5px;
+}
+.black_overlay{
+      position: absolute; top: 0%;left: 0%; width: 60%; height: 100%;
+      background-color: #2daebf;z-index:1001;
+      -moz-opacity: 0.8; opacity:.70; filter: alpha(opacity=80);
+}
+/* ------------------------------------------------------------------ */
+

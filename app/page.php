@@ -12,30 +12,33 @@ class Page extends F3instance {
 	}
 	function home() {
 		$this->_clear(array('error'));
-		$this->_page('home', 'Yönetici Paneli');
+		$this->_page('home', 'Ana Sayfa');
 	}
-	function info() {
+	function about() {
 		$this->_clear(array('success', 'error'));
-		$this->_page('info', 'Bilgilendirme Sayfası');
+		$this->_page('about', 'Hakkında');
 	}
 	function drug() {
 		$this->_clear(array('success', 'error'));
-		$this->_page('drug', 'Hmmm');
+		$this->_page('drug', 'Etkileşim');
 	}
 	function drugcontent() {
 		$this->_clear(array('success', 'error'));
-		$this->_page('drugcontent', 'Hmmm2');
+		$this->_page('drugcontent', 'İlaç İçerik');
 	}
 	function show() {
-		$table = new Axon('drugs55');
+		$table = new Axon('drugs');
 		$drug = $table->afind("id='" . F3::get('PARAMS.id') . "'");
 		F3::set('drug', $drug[0]);
 		$this->_page('show', 'İnceleme Sonuçları');
 	}
+	function prescription() {
+		$this->_page('prescription', 'Reçete');
+	}
 	function review() {
 		$this->_clear(array('success', 'error'));
 
-		F3::set('drugs', DB::sql('select * from drugs55'));
+		F3::set('drugs', DB::sql('select * from drugs'));
 		$this->_page('review', 'İlaçlar');
 	}
 
@@ -45,7 +48,7 @@ class Page extends F3instance {
 			return;
 		}
 
-		$drug = new Axon("drugs55");
+		$drug = new Axon("drugs");
 		$drug_ids = preg_split('/,/', $_POST['drugs']);
 		$selected_drugs = array();
 
@@ -65,7 +68,7 @@ class Page extends F3instance {
 			return;
 		}
 
-		$drug = new Axon("drugs55");
+		$drug = new Axon("drugs");
 		$drug_ids = preg_split('/,/', $_POST['drugs']);
 		$selected_drugs = array();
 
@@ -83,7 +86,7 @@ class Page extends F3instance {
 	function dr() {
 		// $drugs = DB::sql("select * from drugs");
 		// foreach ($drugs as $drug) {
-		// 	$dr = new Axon("drugs55");
+		// 	$dr = new Axon("drugs");
 		// 	$dr->name = $drug['name'];
 
 		// 	$c = preg_split('/</', $drug['content']);

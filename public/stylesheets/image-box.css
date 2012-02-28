@@ -13,6 +13,9 @@ ul.photos a { display: inline; float: left; margin: 0 0 9px 10px; line-height: 1
 ul.photos img { display: block; margin: 0 0 5px; padding: 4px; border: 1px solid #ccc; border-color: rgba(0,0,0,.25); -moz-border-radius: 5px; -moz-box-shadow: 0 1px 3px rgba(0,0,0,.15); -webkit-border-radius: 5px; -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.15); -webkit-transition: all 0.15s ease-out; }
 ul.photos a:hover img { border-color: #999; border-color: rgba(201,2,92,.5); -moz-box-shadow: 0 0 5px rgba(201,2,92,.5); -webkit-box-shadow: 0 0 5px rgba(201,2,92,.5); }
 ul.photos li h5 { font-size: 14px; }
+ul.photos.xsmall { margin-left: -15px; }
+ul.photos.xsmall a { margin: 0 0 14px 15px; }
+ul.photos.xsmall img { width: 26px; height: 26px; }
 ul.photos.small { margin-left: -15px; }
 ul.photos.small a { margin: 0 0 14px 15px; }
 ul.photos.medium, ul.photos.large { margin-left: -20px; }
