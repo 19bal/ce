@@ -29,14 +29,9 @@ function content_clear($content) {
 function newdrugs() {
 	$drugs = DB::sql('select * from drugs');
 	foreach ($drugs as $drug) {
-		echo $drug['name'];
-		$d = new Axon('drugs');
+		$d = new Axon('drugs2');
 		$d->name = $drug["name"];
-		$d->content = content_clear($drug["content"]);
-		$d->dmn = $drug["dmn"];
-		$d->dmx = $drug["dmx"];
-		$d->dval = $drug["dval"];
-		$d->dayol = $drug["dayol"];
+		$d->content = $drug["content"];
 		$d->save();
 	}
 }

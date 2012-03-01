@@ -1,0 +1,54 @@
+#submit_button {
+    height:23px;
+    color:#2F7CA2;
+    text-align:center;
+    padding-top:6px;
+    background:url(../images/btn.png) no-repeat top;
+    font-weight:bold;
+    width:96px;
+    font-size:13px;
+    display:block;
+    cursor:pointer;
+    border:none;
+    height:auto;
+    padding-bottom:7px;
+}
+#submit_button:active { background-position:bottom;}
+
+/* -------------------------------------------------------------------- */
+
+#review_button,
+#edit_button,
+#delete_button {
+    background:url(../images/review-24x24.png) no-repeat center;
+    height:24px;
+    width:24px;
+    border:none;
+    cursor:pointer;
+    float:left;
+    margin-right:10px;
+}
+#edit_button {
+    background:url(../images/edit-24x24.png) no-repeat center;
+}
+#delete_button {
+    background:url(../images/delete-24x24.png) no-repeat center;
+    margin-right:0px;
+}
+#pdf_button {
+    background:url(../images/pdf.png) no-repeat center;
+    height:64px;
+    width:64px;
+    border:none;
+    cursor:pointer;
+    float:left;
+}
+#pdf_buttonx32 {
+    height:32px;
+    width:32px;
+    background:url(../images/pdf-32x32.png) no-repeat top;
+    cursor:pointer;
+    border:none;
+    text-decoration: none;
+    text-indent: -9000px;
+}

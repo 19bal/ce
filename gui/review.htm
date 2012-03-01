@@ -1,4 +1,4 @@
-<script type="text/javascript" src="{{@SR}}/public/javascripts/jquery.dataTables.js">
+<script type="text/javascript" src="{{@SR}}/assets/javascripts/jquery.dataTables.js">
 </script>
 
 <script type="text/javascript" charset="utf-8">
@@ -25,7 +25,7 @@
       <F3:repeat group="{{@drugs}}" value="{{@drug}}" >
       <tr>
         <td class="label">
-          {{@drug.name}}
+          {{strtolower_turkish(@drug.name)}}
         </td>
         <td class="label">
           <F3:check if="{{strlen(@drug.content)>97}}">
@@ -35,7 +35,7 @@
         </td>
         <td class="label" style="float:left;width:92px">
           <a href="{{@SR}}/show/{{@drug.id}}" target="_black">
-            <input type="submit" id="button-preview" title="İncele" value="">
+            <input type="submit" id="review_button" title="İncele" value="">
           </a>
         </td>
       </tr>

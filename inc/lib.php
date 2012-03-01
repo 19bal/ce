@@ -1,7 +1,5 @@
 <?php
 include 'init.php';
-include 'csv.php';
-include 'upload.php';
 include 'new_drug.php';
 include 'content_split.php';
 
@@ -17,5 +15,12 @@ function array_in($item, $fields) {
 }
 function array_key($item, $array) {
 	return $array[$item];
+}
+function strtolower_turkish($string) {
+	$lower = array(
+		'İ' => 'i', 'I' => 'ı', 'Ğ' => 'ğ', 'Ü' => 'ü',
+		'Ş' => 'ş', 'Ö' => 'ö', 'Ç' => 'ç',
+	);
+	return strtolower(strtr($string, $lower));
 }
 ?>

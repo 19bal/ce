@@ -1,18 +1,18 @@
-<script type="text/javascript" src="{{@SR}}/public/javascripts/facebox.js"></script>
+<script type="text/javascript" src="{{@SR}}/assets/javascripts/facebox.js"></script>
 <script type="text/javascript">
   jQuery(document).ready(function($) {
     $('a[rel*=facebox]').facebox({
-    loadingImage : '{{@SR}}/public/images/loading.gif',
-    closeImage   : '{{@SR}}/public/images/closelabel.png'
+    loadingImage : '{{@SR}}/assets/images/loading.gif',
+    closeImage   : '{{@SR}}/assets/images/closelabel.png'
     });
     vtip();
   })
 </script> 
 
 <!-- tooltip »vtip -->
-<script type="text/javascript" src="{{@SR}}/public/javascripts/vtip.js"></script> 
+<script type="text/javascript" src="{{@SR}}/assets/javascripts/vtip.js"></script> 
 <!-- ilaç seçimi -->
-<script type="text/javascript" src="{{@SR}}/public/javascripts/jquery.tokeninput.js"></script>
+<script type="text/javascript" src="{{@SR}}/assets/javascripts/jquery.tokeninput.js"></script>
 <!-- end ilaç seçimi -->
 
 
@@ -52,26 +52,25 @@
       <th colspan="4">Reçete Bilgileri</th>
     </tr>
     <tr>
-      <th class="field1">Hasta Adı</th>
-      <th class="field2">Ramazan Sarsılmaz</th>
+      <th class="field1">Tc Kimlik No</th>
+      <th class="field2">
+        <label class="label">
+          1234567890
+        </label>
+      </th>
       <th class="field1">Yaş</th>
       <th class="field2">
-            <input type="text" id="sex" name="sex" />
+        <input type="text" id="age" name="age" />
       </th>
     </tr>
     <tr>
-      <th class="field1">Tc Kimlik No</th>
+      <th class="field1">Hasta Adı</th>
+      <th class="field2">Ramazan Sarsılmaz</th>
+      <th class="field1">Cinsiyet</th>
       <th class="field2">
-        <div class="tokeninput">
-          <label class="label">
-            1234567890
-          </label>
-        </div>
+        Erkek
       </th>
-      <th rowspan=2 class="field1">Doktor Adı</th>
-      <th rowspan=2 class="field2">
-        Mustafa Çapraz
-      </th>
+
     </tr>
     <tr>
       <th class="field1">İlaç</th>
@@ -81,6 +80,10 @@
             <input type="text" id="drugs" name="drugs" />
           </label>
         </div>
+      </th>
+      <th class="field1">Doktor Adı</th>
+      <th class="field2">
+        Mustafa Çapraz
       </th>
     </tr>
     <tr>

@@ -1,0 +1,94 @@
+#notice {margin:auto;width:960px;}
+.success, .error {
+	width:       735px;
+	padding:     8px 20px 10px;
+	color:       #fff;
+	background: #2daebf;
+	line-height: 16px;
+	font-size:   13px;
+	font-family: arial, helvetica, sans-serif;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius:      4px;
+	box-shadow:0 0px 10px rgba(0, 0, 0, 0.2);
+
+	border:solid 1px #cfe5a0;
+	border-top-color:#b4d76c;
+	border-left-color:#b4d76c;
+	background:#e3f0c8;
+	color:#6c932f;
+}
+.error {
+	border:solid 1px #e5bda0;
+	border-top-color:#d7996c;
+	border-left-color:#d7996c;
+	background:#f0d9c8;
+	color:#9c4c33;
+}
+.success2, .error2 {
+	width:       400px;
+	padding:     8px 20px 10px;
+	color:       #fff;
+	background: #2daebf;
+	line-height: 16px;
+	font-size:   13px;
+	font-family: arial, helvetica, sans-serif;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius:      4px;
+	box-shadow:0 0px 10px rgba(0, 0, 0, 0.2);
+	font-weight: bold;
+	font-family: arial, helvetica, sans-serif;
+}
+.error2 {
+	color: white;
+	background-color:#d62929;
+}
+#successline, #errorline {
+	color:#468012;
+	margin-bottom:5px;
+	font-size:11px;
+	text-transform:none;
+}
+#errorline {
+	color:#763926;
+}
+#headline {
+    padding: 10px 20px;
+    background: #f8f8f8;
+    text-shadow: #fff 1px 1px;
+    color: #2f7ca2;
+    font-size: 17px;
+    margin-bottom: 20px;
+    font-weight:    bold;
+    font-family:    helvetica, geneva, arial, sans-serif;
+}
+#boxline {
+	color:#888888;
+	font-size:18px;
+	padding:15px;
+	font-weight: normal;
+	overflow:hidden;
+	*zoom:1;
+	background-image:-webkit-gradient(linear,0% 0,0% 100%,color-stop(0%,#fff),color-stop(100%,#f5f5f5));
+	background-image:-moz-linear-gradient(top,#fff 0,#f5f5f5 100%);
+	background-image:linear-gradient(top,#fff 0,#f5f5f5 100%);
+	-moz-border-radius-topleft:5px;
+	-webkit-border-top-left-radius:5px;
+	-o-border-top-left-radius:5px;
+	-ms-border-top-left-radius:5px;
+	-khtml-border-top-left-radius:5px;
+	border-top-left-radius:5px;
+	-moz-border-radius-topright:5px;
+	-webkit-border-top-right-radius:5px;
+	-o-border-top-right-radius:5px;
+	-ms-border-top-right-radius:5px;
+	-khtml-border-top-right-radius:5px;
+	border-top-right-radius:5px;
+	margin:-20px;
+	margin-bottom:30px;
+}
+.highlight {
+	font-size: 50px;
+	color: #0099ff;
+}

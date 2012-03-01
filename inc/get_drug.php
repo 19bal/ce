@@ -1,12 +1,12 @@
 <?php
 
-require_once  'init.php';
+require_once  'lib.php';
 
 function myserialize($arr) {
 	$str = '[';
 
 	foreach($arr as $i=>$a) {
-		$str .= '{"id":"' . $a['id'] . '","name":"' . $a['name'] . '"}';
+		$str .= '{"id":"' . $a['id'] . '","name":"' . strtolower_turkish($a['name']) . '"}';
 
 		if($i <> (count($arr) - 1)) $str .= ',';
 	}

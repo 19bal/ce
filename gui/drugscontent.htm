@@ -1,0 +1,35 @@
+<link rel="stylesheet" type="text/css" 
+href="{{@SR}}/assets/stylesheets/style.css" 
+ /> 
+ 
+ <script type="text/javascript" 
+   src="{{@SR}}/assets/javascripts/jquery.js"></script>
+   <script type="text/javascript" 
+     src="{{@SR}}/assets/javascripts/facebox.js"></script>
+ <script type="text/javascript"> jQuery(document).ready(function($) {
+    $('a[rel*=facebox]').facebox({
+loadingImage : '{{@SR}}/assets/images/loading.gif',
+closeImage   : '{{@SR}}/assets/images/closelabel.png'
+    })
+  })
+</script>
+<link rel="stylesheet" type="text/css" 
+href="{{@SR}}/assets/stylesheet/jquery-ui.css" />
+<div id="tabs" class="clear">
+  <ul>
+    <F3:repeat group="{{@drugs}}" key="{{@id}}" value="{{@arr}}" 
+    counter="{{@ctr}}">
+      <li><a href="#frag-{{@ctr}}">{{@arr[0]}}</a></li>
+    </F3:repeat>
+  </ul>
+
+  <F3:repeat group="{{@drugs}}" key="{{@id}}" value="{{@arr}}" 
+  counter="{{@ctr}}">
+  <h2>{{@arr[0]}}</h2>
+    <F3:repeat group="{{@arr[1]}}" key="{{@key}}" value="{{@val}}">
+      <div id="frag-{{@ctr}}"><p class="answer">{{@key}}</p></div>
+      <div id="frag-{{@ctr}}"><p class="answer">{{@val}}</p></div>
+    </F3:repeat>
+  </F3:repeat>
+
+</div>
