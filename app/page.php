@@ -33,7 +33,7 @@ class Page extends F3instance {
 		$selected_drugs = array();
 
 		foreach($drug_ids as $id) {
-			$datas = $drug->afind("id='$id'");
+			$datas = $drug->afind("name='$id'");
 			$name  = $datas[0]['name'];
 			$content  = $datas[0]['content'];
 			$selected_drugs[$id] = array($name, $content);
@@ -57,7 +57,7 @@ class Page extends F3instance {
 		$selected_drugs = array();
 
 		foreach($drug_ids as $id) {
-			$datas = $drug->afind("id='$id'");
+			$datas = $drug->afind("name='$id'");
 			$name  = strtolower_turkish($datas[0]['name']);
 			$content  = $datas[0]['content'];
 			$selected_drugs[$id] = array($name, content_split($content));
@@ -82,21 +82,46 @@ class Page extends F3instance {
 		$this->_page('prescription', 'Reçete');
 	}
 	function prescription_result() {
-		if(empty($_POST)) {
-			echo "Herhangi bir ilaç seçimi yapılmamış";
+		if (empty($_POST)) {
+			echo "Herhangi bir ilaç seçimi yapılmamış ya da yaş girilmemiş";
 			return;
 		}
+		$state = (F3::get('REQUEST.age') >= 65) ? true : false;
 
 		$drugs = new Axon("drugs");
-		$drug_ids = preg_split('/,/', $_POST['drugs']);
+		$drug_ids = preg_split('/,/', F3::get('REQUEST.drugs'));
 		$selected_drugs = array();
 
-		//$interactive_drugs = new Axon("interactive_drugs");
-		foreach($drug_ids as $id) {
-			$datas = $drugs->afind("id='$id'");
-			$name  = strtolower_turkish($datas[0]['name']);
-			$content  = $datas[0]['content'];
-			$selected_drugs[$id] = array($name, $content);
+		$interactive_drugs = new Axon("interactive_drugs");
+		foreach ($drug_ids as $id) {
+			$id = strtolower_turkish($id);
+
+			if ($interactive_drugs->found("name='$id'")) {
+				$datas = $interactive_drugs->afind("name='$id'");
+				$rate = $datas[0]['rate'];
+			} else {
+				$datas = $drugs->afind("name='$id'");
+				$rate = -1;
+			}
+			// hastalık için duyarlılık
+			if ($state)
+				switch ($rate) {
+				case 0:
+					$rate = "L";break;
+				case 1:
+					$rate = "H";break;
+				case -1:
+					$rate = "X";break;
+				default:
+					$rate = "X";
+				}
+			else
+				$rate = "X";
+
+			$name = strtolower_turkish($datas[0]['name']);
+			$content = $datas[0]['content'];
+
+			$selected_drugs[$id] = array($name, $content, $rate);
 		}
 
 		F3::set('drugs', $selected_drugs);

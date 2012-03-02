@@ -1,0 +1,20 @@
+id,disease,drug,rate
+1,Heart failure,Disopyramide (Norpace) and high sodium content drugs(sodium and sodium salts [alginate bicarbonate biphosphate citrate phosphate salicylate and sulfate]),1
+2,Hypertension,Phenylpropanolamine hydrochloride pseudoephedrine diet pills and amphetamines,1
+3,Gastric or duodenal ulcers,NSAIDs and aspirin (>325),1
+4,Seizures or epilepsy,Clozapine(clozaril) chlorpromazine(thorazine) thioridazine(mellaril) and thiothiexene(navane),1
+5,Blood clotting disorders or receiving anticoagulant therapy,Aspirin NSAIDs dipyridamole(Persantin) ticlopidine(Ticlid) and clopidogrel(Plavix),1
+6,Bladder outflow obstruction,Anticholinergics and antihistamines gastrointestinal antispasmodics muscle relaxants oxybutynin(Ditropan) flavoxate(Urispas) anticholinergics antidepressants decongestants and tolterodine(Detrol),1
+7,Stress incontinence,α-Blockers(Doxazosin Prazosin and Terazosin) anticholinergics tricyclic antidepressants (imipramine hydrochloride doxepin hydrochloride and amitriptyline hydrochloride) and long-acting benzodiazepines,1
+8,Arrhythmias,Tricyclic antidepressants (imipramine hydrochloride doxepin hydrochloride and amitriptyline hydrochloride),1
+9,Insomnia,Decongestants theophylline(Theodur) Methylphenidate(Ritalin) MAOIs and amphetamines,1
+10,Parkinson disease,Metoclopramide(Reglan) conventional antipsychotics and tacrine(Cognex),1
+11,Cognitive impairment,Barbiturates anticholinergics antispasmodics and muscle relaxants. CNS stimulants dextroAmphetamine(Adderall) methylphenidate(Ritalin) methamphetamine(Desoxyn)and pemolin,1
+12,Depression,Long-term benzodiazepine use.Sympatholytic agents:methyldopa(Aldomet) reserpine and guanethidine(Ismelin),1
+13,Anorexia and malnutrition,CNS stimulants:DextroAmphetamine(Adderall) methylphenidate(Ritalin) methamphetamine(Desoxyn) pemolin and fluoxetine(Prozac),1
+14,Syncope or falls,Short-to intermediate-acting benzodiazepine and tricyclic antidepressants (imipramine hydrochloride doxepin hydrochloride and amitriptyline hydrochloride),1
+15,SIADH/hyponatremia,SSRIs:fluoxetine(Prozac) citalopram(Celexa) fluvoxamine(Luvox) paroxetine(Paxil) and sertraline(Zoloft),0
+16,Seizure disorder,Bupropion(Wellbutrin),1
+17,Obesity,Olanzapine(Zyprexa),0
+18,COPD,Long-acting benzodiazepines:chlordiazepoxide(Librium)chlordiazepoxide-amitriptyline(Limbitrol) clidinium-chlordiazepoxide (Librax) diazepam(Valium) quazepam (Doral) halazepam (Paxipam) and chlorazepate (Tranxene) β-blockers:propranolol,1
+19,Chronic constipation,Calcium channel blockers anticholinergics and tricyclic antidepressant(imipramine hydrochloride doxepin hydrochloride and amitriptyline hydrochloride),0

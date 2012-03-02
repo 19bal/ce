@@ -1,0 +1,86 @@
+ul {
+    list-style: none outside none;
+}
+a {
+    color: #000000;
+    text-decoration: none;
+}
+#meio {
+    border: thin solid #DEE9D0;
+    border-radius: 0 0 5px 5px;
+    height: 215px;
+    margin-top: 0;
+    position: relative;
+    width: 930px;
+}
+#meio a {
+    background-color: #7BAE21;
+    background-image: url("../images/default.png");
+    background-position: 30px 5px;
+    background-repeat: no-repeat;
+    bottom: 15px;
+    color: #FFFFFF;
+    display: block;
+    font-size: 12px;
+    height: 16px;
+    margin-left: 20px;
+    margin-top: 12px;
+    padding: 7px 0 5px 50px;
+    position: absolute;
+    width: 116px;
+}
+#meio a:hover {
+    background-color: #5C8218;
+    color: #FFFFFF;
+}
+#meio h1 {
+    border-bottom: medium none;
+    color: #7BB55B;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 0;
+    padding-bottom: 6px;
+}
+#meio #meio1, #meio #meio2, #meio #meio3, #meio #meio4{
+    border-right: 1px dotted #CCCCCC;
+    color: #666666;
+    float: left;
+    font-size: 11px;
+    height: 190px;
+    padding: 15px 10px 10px 83px;
+    width: 840px;
+}
+#meio #meio1 ul li.accept, #meio #meio2 ul li.accept, #meio #meio3 ul li.accept, #meio #meio4 ul li.accept {
+    background-image: url("../images/process_accept.png");
+    background-position: 0 2px;
+    background-repeat: no-repeat;
+    line-height: 17px;
+    padding-left: 20px;
+}
+#meio #meio1 ul li.warning, #meio #meio2 ul li.warning, #meio #meio3 ul li.warning, #meio #meio4 ul li.warning {
+    background-image: url("../images/process_warning.png");
+    background-position: 0 2px;
+    background-repeat: no-repeat;
+    line-height: 17px;
+    padding-left: 20px;
+}
+#meio #meio1 {
+    background-image: url("../images/default.png");
+    background-position: 6px 15px;
+    background-repeat: no-repeat;
+}
+#meio #meio2 {
+    background-image: url("../images/default.png");
+    background-position: 6px 15px;
+    background-repeat: no-repeat;
+}
+#meio #meio3 {
+    background-image: url("../images/default.png");
+    background-position: -5px 15px;
+    background-repeat: no-repeat;
+}
+#meio #meio4 {
+    background-image: url("../images/default.png");
+    background-position: -5px 15px;
+    background-repeat: no-repeat;
+}

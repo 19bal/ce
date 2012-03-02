@@ -1,0 +1,39 @@
+<!-- facebox -->
+<script src="{{@SR}}/assets/javascripts/facebox.js" 
+type="text/javascript"></script>
+<script type="text/javascript">
+  jQuery(document).ready(function($) {
+      $('a[rel*=facebox]').facebox({
+        loadingImage : '{{@SR}}/assets/images/loading.gif',
+        closeImage   : '{{@SR}}/assets/images/closelabel.png'
+    })
+  })
+</script>
+<!-- end facebox -->
+
+<table class='dashboard'>
+  <thead>
+    <tr>
+      <th class='shrink'>Drug</th>
+      <th class='shrink'>Rate</th>
+      <th>Hastalık1</th>
+    </tr>
+  </thead>
+  <tbody>
+  <F3:repeat group="{{@drugs}}" key="{{@id}}" value="{{@arr}}">
+      <tr>
+        <td><a href="#{{@arr[0]}}" rel="facebox">{{@arr[0]}}</a></td>
+        <td><b>{{@arr[2]}}</b></td>
+        <td></td>
+      </tr>
+  </F3:repeat>
+  </tbody>
+</table>
+
+<!-- for faceboox info -->
+<F3:repeat group="{{@drugs}}" key="{{@id}}" value="{{@arr}}">
+<div id="{{@arr[0]}}" style="display:none;">
+  {{@arr[1]}}
+</div>
+</F3:repeat>
+<!-- end faceboox info -->

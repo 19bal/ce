@@ -20,7 +20,7 @@
 #review_button,
 #edit_button,
 #delete_button {
-    background:url(../images/review-24x24.png) no-repeat center;
+    background:url(../images/review.png) no-repeat center;
     height:24px;
     width:24px;
     border:none;
@@ -29,26 +29,26 @@
     margin-right:10px;
 }
 #edit_button {
-    background:url(../images/edit-24x24.png) no-repeat center;
+    background:url(../images/edit.png) no-repeat center;
 }
 #delete_button {
-    background:url(../images/delete-24x24.png) no-repeat center;
+    background:url(../images/delete.png) no-repeat center;
     margin-right:0px;
 }
-#pdf_button {
-    background:url(../images/pdf.png) no-repeat center;
-    height:64px;
-    width:64px;
-    border:none;
-    cursor:pointer;
-    float:left;
+#accept_button {
+    background:url(../images/process_accept.png) no-repeat center;
+    margin-right:0px;
 }
-#pdf_buttonx32 {
+#warning_button {
     height:32px;
-    width:32px;
-    background:url(../images/pdf-32x32.png) no-repeat top;
-    cursor:pointer;
-    border:none;
-    text-decoration: none;
+    background:url(../images/process_warning.png) no-repeat bottom;
     text-indent: -9000px;
+    margin-bottom:-20px;
+}
+
+#accept_button {
+    height:32px;
+    background:url(../images/process_accept.png) no-repeat bottom;
+    text-indent: -9000px;
+    margin-bottom:-20px;
 }
